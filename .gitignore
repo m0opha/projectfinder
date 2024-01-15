@@ -1,0 +1,5 @@
+*.spec
+.env/
+/dist/
+/build/
+/test/
