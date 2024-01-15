@@ -10,6 +10,9 @@ def ArgHandler():
     path = None
     destine_path = None
 
+    if len(arg_extract) == 2:
+        help()
+
     for _argv , _value in arg_extract.items():
         if _argv not in allowed_arg:
             print(f"[+] unrecognized argument {_argv}, use --help, -h")

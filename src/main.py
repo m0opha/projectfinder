@@ -16,4 +16,5 @@ def main():
     file_content = ReadFiles(project_files_path)
     folder_to_copy = ExtractPaths(content=file_content, key="path")
     CopyFoldersTo(folder_to_copy, destine)
+    
     print(f"Total Project found : {len(folder_to_copy)}")

@@ -45,7 +45,7 @@ while [[ "$#" -gt 0 ]]; do
         -r|--run)
             if [ -f "./dist/projectfinder" ]; then
                 echo "Running app..."
-                ./dist/purgerepitedfiles --help
+                ./dist/projectfinder 
             else
                 echo "Executable not found. Building binary..."
                 build_binary
