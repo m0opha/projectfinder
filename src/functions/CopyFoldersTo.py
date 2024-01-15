@@ -24,7 +24,7 @@ def CopyFoldersTo(folders:list, destination:str):
 
             else:
                 copied_folder[os.path.basename(_folder)] += 1
-                print(f"{_folder} : { os.path.basename(_folder)+"_"+str(copied_folder[os.path.basename(_folder)])}")
+                print(f"{_folder} : {os.path.basename(_folder)}_{str(copied_folder[os.path.basename(_folder)])}")
                 shutil.copytree(_folder, os.path.join(destination, os.path.basename(_folder)+"_"+str(copied_folder[os.path.basename(_folder)])))
                 incrementor.increment()                
 
