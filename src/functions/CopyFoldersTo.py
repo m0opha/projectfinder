@@ -6,8 +6,8 @@ def CopyFoldersTo(folders:list, destination:str):
     
     copied_folder = {}
 
-    #progress_logger = ProgressBarLogger()
-    #progress_logger.initUI("[*] copying Folders to destination")    
+    progress_logger = ProgressBarLogger()
+    progress_logger.initUI("[*] copying Folders to destination")    
 
     incrementor = Incrementor()
     total_folder = len(folders)
@@ -28,11 +28,11 @@ def CopyFoldersTo(folders:list, destination:str):
                 shutil.copytree(_folder, os.path.join(destination, os.path.basename(_folder)+"_"+str(copied_folder[os.path.basename(_folder)])))
                 incrementor.increment()                
 
-            #progress_logger.drawProgressBar(int(incrementor.get()*100/total_folder))
-            #progress_logger.log(f"Folder copied from {_folder} to {destination}")
+            progress_logger.drawProgressBar(int(incrementor.get()*100/total_folder))
+            progress_logger.log(f"Folder copied from {_folder} to {destination}")
 
         except Exception as e:
             print(f"Error copying the folder: {e}")
 
          
-    #progress_logger.close()
+    progress_logger.close()

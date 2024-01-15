@@ -1,11 +1,6 @@
 import json
 
-from .functions import (ArgHandler, 
-                        CopyFoldersTo, 
-                        ReadFiles, 
-                        GetFiles,
-                        ExtractPaths)
-
+from .functions import ArgHandler, CopyFoldersTo, ReadFiles, GetFiles,ExtractPaths
 from .functions.modules import TraverseDirectoryTree
 
 def main():
